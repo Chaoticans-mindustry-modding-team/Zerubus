@@ -9,7 +9,7 @@ import mindustry.gen.*;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
 
-import zerubus.content.*;
+import Zerubus.content.*;
 
 public class ZerubusJavaMod extends Mod{
 
