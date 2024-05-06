@@ -61,3 +61,18 @@ public class ZerubusBlocks{
             health = 80;
             envDisabled |= Env.scorching;
         }};
+
+        coreDire = new CoreBlock("core-dire"){{
+            requirements(Category.effect, with(Items.copper, 1000, Items.lead, 800));
+            alwaysUnlocked = true;
+
+            isFirstTier = true;
+            unitType = UnitTypes.alpha;
+            health = 1100;
+            itemCapacity = 4000;
+            size = 4;
+
+            unitCapModifier = 8;
+        }};
+
+   
