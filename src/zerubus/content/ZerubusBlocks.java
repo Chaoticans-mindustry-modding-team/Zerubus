@@ -64,7 +64,7 @@ coreDire
         }};
 
         coreDire = new CoreBlock("core-dire"){{
-            requirements(Category.effect, with(ZerubusItems.silver, 1000, ZerubusItems.Indium, 800));
+            requirements(Category.effect, with(ZerubusItems.silver, 1000, ZerubusItems.indium, 800));
             alwaysUnlocked = true;
 
             isFirstTier = true;
