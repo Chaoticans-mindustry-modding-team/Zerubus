@@ -33,8 +33,8 @@ public class ZerubusJavaMod extends Mod{
     @Override
     public void loadContent(){
         Log.info("Loadin");
-        JavacamodBlocks.load();
-        JavacamodItems.load();
+        ZerubusBlocks.load();
+        ZerubusItems.load();
     }
 
 }
