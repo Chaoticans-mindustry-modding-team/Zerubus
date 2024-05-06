@@ -60,7 +60,13 @@ coreDire
     public static void load() {
         silverWall = new Wall("silver-wall"){{
             requirements(Category.defense, with(ZerubusItems.silver, 6));
-            health = 80;
+            health = 600;
+            envDisabled |= Env.scorching;
+        }};
+
+        silverWallLarge = new Wall("silver-wall-large"){{
+            requirements(Category.defense, with(ZerubusItems.silver, 24));
+            health = 2400;
             envDisabled |= Env.scorching;
         }};
 
@@ -70,7 +76,7 @@ coreDire
 
             isFirstTier = true;
             unitType = UnitTypes.alpha;
-            health = 1100;
+            health = 4000;
             itemCapacity = 4000;
             size = 4;
 
