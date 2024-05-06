@@ -70,7 +70,7 @@ public class Planets{
             updateLighting = false;
 
             ruleSetter = r -> {
-                r.waveTeam = Team.affinity;
+                r.waveTeam = Team.blue;
                 r.placeRangeCheck = false;
                 r.showSpawns = true;
                 r.fog = true;
