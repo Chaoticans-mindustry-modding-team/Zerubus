@@ -39,9 +39,8 @@ import mindustry.world.blocks.units.*;
 import mindustry.world.consumers.*;
 import mindustry.world.draw.*;
 import mindustry.world.meta.*;
-import zerubus.world.blocks.logic.*;
-import zerubus.world.blocks.decoration.*;
-import zerubus.world.blocks.distribution.*;
+import mindustry.content.*;
+import zerubus.content.*;
 
 import static mindustry.Vars.*;
 import static mindustry.type.ItemStack.*;
@@ -65,7 +64,7 @@ coreDire
         }};
 
         coreDire = new CoreBlock("core-dire"){{
-            requirements(Category.effect, with(Items.copper, 1000, Items.lead, 800));
+            requirements(Category.effect, with(ZerubusItems.silver, 1000, ZerubusItems.Indium, 800));
             alwaysUnlocked = true;
 
             isFirstTier = true;
