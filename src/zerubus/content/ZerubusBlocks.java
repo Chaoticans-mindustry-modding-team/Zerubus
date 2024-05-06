@@ -51,13 +51,15 @@ public class ZerubusBlocks{
     //walls
     public static Block 
 
-
-  
+//walls
+silverWall,
+//cores
+coreDire
 ;
     
     public static void load() {
-        redWall = new Wall("red-wall"){{
-            requirements(Category.defense, with(ZerubusItems.red, 6));
+        silverWall = new Wall("silver-wall"){{
+            requirements(Category.defense, with(ZerubusItems.silver, 6));
             health = 80;
             envDisabled |= Env.scorching;
         }};
