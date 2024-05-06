@@ -70,6 +70,31 @@ coreDire
             envDisabled |= Env.scorching;
         }};
 
+        silverDuct = new StackConveyor("silver-duct"){{
+            requirements(Category.distribution, with(ZerubusItems.silver, 3));
+            health = 20;
+            speed = 4f / 60f;
+            itemCapacity = 15;
+            solid = false;
+        }};
+
+        silverJunction = new Junction("silver-junction"){{
+            requirements(Category.distribution, with(ZerubusItems.silver, 2));
+            speed = 30;
+            capacity = 6;
+            health = 30;
+            buildCostMultiplier = 6f;
+            solid = false;
+        }};
+
+        silverRouter = new DuctRouter("silver-router"){{
+            requirements(Category.distribution, with(ZerubusItems.silver,2));
+            health = 90;
+            speed = 4f;
+            regionRotated1 = 1;
+            solid = false;
+        }};
+
         coreDire = new CoreBlock("core-dire"){{
             requirements(Category.effect, with(ZerubusItems.silver, 1000, ZerubusItems.indium, 800));
             alwaysUnlocked = true;
