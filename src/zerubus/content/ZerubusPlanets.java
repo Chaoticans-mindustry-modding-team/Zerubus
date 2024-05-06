@@ -18,8 +18,8 @@ import mindustry.world.meta.*;
 public class Planets{
     public static Planet
     cataclysm,
-    zerubus,
-
+    zerubus
+    ;
     public static void load(){
         cataclysm = new Planet("cataclysm", null, 4f){{
             bloom = true;
