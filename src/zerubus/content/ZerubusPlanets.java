@@ -14,9 +14,10 @@ import mindustry.maps.planet.*;
 import mindustry.type.*;
 import mindustry.world.*;
 import mindustry.world.meta.*;
+import zerubus.content.*;
 
 public class Planets{
-    public static Planet
+    public static ZerubusPlanet
     cataclysm,
     zerubus
     ;
