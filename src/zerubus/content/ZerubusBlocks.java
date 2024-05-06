@@ -52,7 +52,9 @@ public class ZerubusBlocks{
     public static Block 
 
 //walls
-silverWall,
+silverWall, silverWallLarge,
+//distribution
+silverDuct, silverJunction, silverRouter,
 //cores
 coreDire
 ;
