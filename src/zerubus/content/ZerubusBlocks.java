@@ -77,4 +77,6 @@ coreDire
             unitCapModifier = 8;
         }};
 
+    }
+}
    
