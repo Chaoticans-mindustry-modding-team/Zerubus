@@ -1,4 +1,4 @@
-package javacamod;
+package zerubus;
 
 import arc.*;
 import arc.util.*;
