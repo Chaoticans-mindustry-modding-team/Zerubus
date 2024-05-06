@@ -8,7 +8,7 @@ name: "zerubus"
 author: "The chaoticans"
 
 #the fully qualified main class of the mod
-main: "zerubus.ZerubusJavamod"
+main: "zerubus.ZerubusJavaMod"
 
 #the mod description as seen in the mod dialog
 description: "Its time once more"
