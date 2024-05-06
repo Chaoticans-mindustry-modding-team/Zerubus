@@ -9,7 +9,7 @@ import mindustry.gen.*;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
 
-import Zerubus.content.*;
+import zerubus.content.*;
 
 public class ZerubusJavaMod extends Mod{
 
@@ -33,6 +33,8 @@ public class ZerubusJavaMod extends Mod{
     @Override
     public void loadContent(){
         Log.info("Loadin");
+        JavacamodBlocks.load();
+        JavacamodItems.load();
     }
 
 }
