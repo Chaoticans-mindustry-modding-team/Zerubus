@@ -44,7 +44,6 @@ import zerubus.content.*;
 
 import static mindustry.Vars.*;
 import static mindustry.type.ItemStack.*;
-import static mindustry.content.items.*;
 import static zerubus.content.ZerubusItems.*;
 
 @SuppressWarnings("deprecation")
