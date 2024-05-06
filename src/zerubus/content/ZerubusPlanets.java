@@ -82,3 +82,6 @@ public class Planets{
 
             unlockedOnLand.add(Blocks.coreDire);
         }};
+
+    }
+}
