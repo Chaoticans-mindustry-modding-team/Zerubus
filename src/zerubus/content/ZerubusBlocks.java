@@ -59,13 +59,13 @@ coreDire
     
     public static void load() {
         silverWall = new Wall("silver-wall"){{
-            requirements(Category.defense, with(silver, 6));
+            requirements(Category.defense, with(ZerubusItems.silver, 6));
             health = 80;
             envDisabled |= Env.scorching;
         }};
 
         coreDire = new CoreBlock("core-dire"){{
-            requirements(Category.effect, with(silver, 1000, indium, 800));
+            requirements(Category.effect, with(ZerubusItems.silver, 1000, ZerubusItems.indium, 800));
             alwaysUnlocked = true;
 
             isFirstTier = true;
