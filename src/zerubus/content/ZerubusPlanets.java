@@ -1,4 +1,4 @@
-package mindustry.content;
+package zerubus.content;
 
 import arc.func.*;
 import arc.graphics.*;
@@ -16,8 +16,8 @@ import mindustry.world.*;
 import mindustry.world.meta.*;
 import zerubus.content.*;
 
-public class Planets{
-    public static ZerubusPlanet
+public class ZerubusPlanets{
+    public static Planet
     cataclysm,
     zerubus
     ;
