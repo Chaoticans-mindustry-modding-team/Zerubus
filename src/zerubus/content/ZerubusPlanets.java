@@ -60,7 +60,7 @@ public class ZerubusPlanets{
             lightSrcTo = 0.5f;
             lightDstFrom = 0.2f;
             clearSectorOnLose = true;
-            defaultCore = Blocks.coreDire;
+            defaultCore = ZerubusBlocks.coreDire;
             iconColor = Color.valueOf("ff9266");
             hiddenItems.addAll(Items.serpuloItems).addAll(Items.erekirItems);
             enemyBuildSpeedMultiplier = 0.4f;
@@ -82,7 +82,7 @@ public class ZerubusPlanets{
                 r.onlyDepositCore = true;
             };
 
-            unlockedOnLand.add(Blocks.coreDire);
+            unlockedOnLand.add(ZerubusBlocks.coreDire);
         }};
 
     }
