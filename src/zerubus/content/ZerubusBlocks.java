@@ -125,7 +125,7 @@ coreDire
             requirements(Category.crafting, with(ZerubusItems.silver, 40, ZerubusItems.indium, 60));
             craftEffect = Fx.smeltsmoke;
             outputItem = new ItemStack(Items.silicon, 5);
-            outputLiquid = new LiquidStack(ZerubusLiquids.oxygen, 0.2);
+            outputLiquid = new LiquidStack(ZerubusLiquids.oxygen, 0.2f);
             craftTime = 40f;
             size = 3;
             hasPower = true;
