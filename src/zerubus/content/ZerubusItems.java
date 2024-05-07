@@ -5,9 +5,11 @@ import arc.struct.*;
 import mindustry.type.*;
 import mindustry.content.*;
 
+import static mindustry.content.items.*;
+
 public class ZerubusItems{
     public static Item
-    indium, silver 
+    indium, silver, silicate
 
     ;
 
