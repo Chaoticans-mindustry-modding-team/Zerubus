@@ -45,6 +45,7 @@ import zerubus.content.*;
 import static mindustry.Vars.*;
 import static mindustry.type.ItemStack.*;
 import static zerubus.content.ZerubusItems.*;
+import static zerubus.content.ZerubusLiquids.*;
 
 @SuppressWarnings("deprecation")
 public class ZerubusBlocks{
