@@ -48,15 +48,15 @@ public class ZerubusPlanets{
             generator = new ErekirPlanetGenerator();
             meshLoader = () -> new HexMesh(this, 5);
             cloudMeshLoader = () -> new MultiMesh(
-                new HexSkyMesh(this, 2, 0.15f, 0.14f, 5, Color.valueOf("eba768").a(0.75f), 2, 0.42f, 1f, 0.43f),
-                new HexSkyMesh(this, 3, 0.6f, 0.15f, 5, Color.valueOf("eea293").a(0.75f), 2, 0.42f, 1.2f, 0.45f)
+                new HexSkyMesh(this, 2, 0.15f, 0.14f, 5, Color.valueOf("ff0000").a(0.75f), 2, 0.42f, 1f, 0.43f),
+                new HexSkyMesh(this, 3, 0.6f, 0.15f, 5, Color.valueOf("ff00ff").a(0.75f), 2, 0.42f, 1.2f, 0.45f)
             );
             alwaysUnlocked = true;
             accessible = true;
-            landCloudColor = Color.valueOf("ed6542");
-            atmosphereColor = Color.valueOf("f07218");
+            landCloudColor = Color.valueOf("ed5532");
+            atmosphereColor = Color.valueOf("f06208");
             defaultEnv = Env.scorching | Env.terrestrial;
-            startSector = 10;
+            startSector = 16;
             atmosphereRadIn = 0.02f;
             atmosphereRadOut = 0.3f;
             tidalLock = false;
@@ -66,7 +66,7 @@ public class ZerubusPlanets{
             lightDstFrom = 0.2f;
             clearSectorOnLose = true;
             defaultCore = ZerubusBlocks.coreDire;
-            iconColor = Color.valueOf("ff9266");
+            iconColor = Color.valueOf("f0000");
             hiddenItems.addAll(Items.erekirItems).addAll(Items.serpuloItems).removeAll(zerubusItems);
             enemyBuildSpeedMultiplier = 0.4f;
 
