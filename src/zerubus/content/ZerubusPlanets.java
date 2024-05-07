@@ -48,6 +48,7 @@ public class ZerubusPlanets{
                 new HexSkyMesh(this, 3, 0.6f, 0.15f, 5, Color.valueOf("eea293").a(0.75f), 2, 0.42f, 1.2f, 0.45f)
             );
             alwaysUnlocked = true;
+            accessible = true;
             landCloudColor = Color.valueOf("ed6542");
             atmosphereColor = Color.valueOf("f07218");
             defaultEnv = Env.scorching | Env.terrestrial;
@@ -56,13 +57,13 @@ public class ZerubusPlanets{
             atmosphereRadOut = 0.3f;
             tidalLock = false;
             orbitSpacing = 2f;
-            totalRadius += 2.6f;
+            totalRadius += 5f;
             lightSrcTo = 0.5f;
             lightDstFrom = 0.2f;
             clearSectorOnLose = true;
             defaultCore = ZerubusBlocks.coreDire;
             iconColor = Color.valueOf("ff9266");
-            hiddenItems.addAll(Items.serpuloItems).addAll(Items.erekirItems);
+            hiddenItems.addAll(Items.erekirItems).addAll(Items.serpuloItems).removeAll(zerubusItems);
             enemyBuildSpeedMultiplier = 0.4f;
 
             //TODO disallowed for now
