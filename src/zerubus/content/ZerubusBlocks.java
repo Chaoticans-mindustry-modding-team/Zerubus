@@ -53,12 +53,18 @@ public class ZerubusBlocks{
 
 //floors n crap
 crimsonGrass, zeruvianSoil, zeruvianStone, bloodSoil,
+//static walls
+crimsonGrassWall, zeruvianSoilWall, zeruvianStoneWall,
+//ores
+silverOre, indiumOre, silicateWallOre,
 //walls
 silverWall, silverWallLarge,
 //distribution
 silverDuct, silverJunction, silverRouter,
 //drills
 silverDrill, silverPlasmaBore,
+//power
+silverNode, indiumNode, silverBattery, coalTurbine,
 //cores
 coreDire
 ;
@@ -67,15 +73,66 @@ coreDire
 
         crimsonGrass = new Floor("crimson-grass"){{
             attributes.set(Attribute.water, 0.1f);
+            variants = 5;
         }};
 
         zeruvianSoil = new Floor("zeruvian-soil"){{
+            variants = 4;
         }};
 
         zeruvianStone = new Floor("zeruvian-stone"){{
+            variants = 4;
         }};
 
         bloodSoil = new Floor("blood-soil"){{
+        }};
+
+        crimsonGrassWall = new StaticWall("crimson-grass-wall"){{
+            variants = 3;
+        }};
+
+        zeruvianSoilWall = new StaticWall("zeruvian-soil-wall"){{
+            variants = 3;
+        }};
+
+        zeruvianStoneWall = new StaticWall("zeruvian-stone-wall"){{
+            variants = 3;
+        }};
+
+        silverOre = new OreBlock(ZerubusItems.silver){{
+            oreDefault = true;
+            oreThreshold = 0.81f;
+            oreScale = 23.47619f;
+        }};
+
+        indiumOre = new OreBlock(ZerubusItems.indium){{
+            oreDefault = true;
+            oreThreshold = 0.81f;
+            oreScale = 23.47619f;
+        }};
+
+        silicateWallOre = new OreBlock(ZerubusItems.silicate){{
+            oreDefault = true;
+            oreThreshold = 0.81f;
+            oreScale = 23.47619f;
+            wallOre = true;
+        }};
+
+        silicateForge = new GenericCrafter("silicate-forge"){{
+            requirements(Category.crafting, with(ZerubusItems.silver, 40, ZerubusItems.indium, 60));
+            craftEffect = Fx.smeltsmoke;
+            outputItem = new ItemStack(Items.silicon, 5);
+            outputLiquid = new liquidStack(ZerubusLiquids.oxygen, 0.2);
+            craftTime = 40f;
+            size = 3;
+            hasPower = true;
+            hasLiquids = true;
+            drawer = new DrawMulti(new DrawDefault(), new DrawFlame(Color.valueOf("ffef99")));
+            ambientSound = Sounds.smelter;
+            ambientSoundVolume = 0.07f;
+
+            consumeItems(with(Items.coal, 5, ZerubusItems.silicate, 5));
+            consumePower(0.50f);
         }};
         
         silverWall = new Wall("silver-wall"){{
@@ -134,6 +191,35 @@ coreDire
             size = 2;
             range = 5;
             fogRadius = 3;
+        }};
+
+        silverNode = new PowerNode("silver-node"){{
+            requirements(Category.power, with(ZerubusItems.silver, 10));
+            maxNodes = 15;
+            laserRange = 8;
+            size = 2;
+        }};
+
+        silverBattery = new Battery("silver-battery"){{
+            requirements(Category.power, with(ZerubusItems.silver, 20, ZerubusItems.indium, 5));
+            consumePowerBuffered(2500f);
+            baseExplosiveness = 1f;
+            size = 2;
+        }};
+
+        coalTurbine = new ConsumeGenerator("coal-turbine"){{
+            requirements(Category.power, with(ZerubusItems.silver, 40, ZerubusItems,indium, 10));
+            powerProduction = 1f;
+            itemDuration = 120f;
+
+            ambientSound = Sounds.smelter;
+            ambientSoundVolume = 0.03f;
+            generateEffect = Fx.generatespark;
+
+            consume(new ConsumeItemFlammable());
+            consume(new ConsumeItemExplode());
+
+            drawer = new DrawMulti(new DrawDefault(), new DrawWarmupRegion());
         }};
 
         coreDire = new CoreBlock("core-dire"){{
