@@ -7,6 +7,7 @@ import mindustry.type.*;
 public class ZerubusLiquids{
     public static Liquid
     
+    oxygen
 
     public static void load(){
 
@@ -16,3 +17,5 @@ public class ZerubusLiquids{
             explosiveness = 1f;
             flammability = 1f;
         }};
+    }
+}
