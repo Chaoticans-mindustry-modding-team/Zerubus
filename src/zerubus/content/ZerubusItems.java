@@ -28,6 +28,10 @@ public class ZerubusItems{
           cost = 0.5f;
           alwaysUnlocked = true;
       }};
+
+      zerubusItems.addAll(
+          silver, indium, silicate, silicon, coal
+          );
     
     }
 }
