@@ -51,6 +51,8 @@ public class ZerubusBlocks{
     //walls
     public static Block 
 
+//floors n crap
+crimsonGrass, zeruvianSoil, zeruvianStone, bloodSoil,
 //walls
 silverWall, silverWallLarge,
 //distribution
@@ -62,6 +64,21 @@ coreDire
 ;
     
     public static void load() {
+
+        crimsonGrass = new Floor("crimson-grass"){{
+            attributes.set(Attribute.water, 0.1f);
+        }};
+
+        zeruvianSoil = new Floor("zeruvian-soil"){{
+        }};
+
+        zeruvianStone = new Floor("zeruvian-stone"){{
+        }};
+
+        bloodSoil = new Floor("blood-soil"){{
+            attributes.set(Attribute.ectoplasm, 0.5f);
+        }};
+        
         silverWall = new Wall("silver-wall"){{
             requirements(Category.defense, with(ZerubusItems.silver, 6));
             health = 600;
