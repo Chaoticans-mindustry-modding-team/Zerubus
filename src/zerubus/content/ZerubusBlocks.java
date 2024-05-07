@@ -97,6 +97,28 @@ coreDire
             solid = false;
         }};
 
+        silverDrill = new Drill("silver-drill"){{
+            requirements(Category.production, with(ZerubusItems.silver, 20, ZerubusItems.indium, 10));
+            tier = 1;
+            drillTime = 600;
+            size = 2;
+            //mechanical drill doesn't work in space
+            envEnabled ^= Env.space;
+
+            consumeLiquid(Liquids.water, 0.05f).boost();
+        }};
+
+        plasmaBore = new BeamDrill("plasma-bore"){{
+            requirements(Category.production, with(ZerubusItems.silver, 20,ZerubusItems.indium, 20));
+            consumePower(0.15f);
+
+            drillTime = 600f;
+            tier = 1;
+            size = 2;
+            range = 5;
+            fogRadius = 3;
+        }};
+
         coreDire = new CoreBlock("core-dire"){{
             requirements(Category.effect, with(ZerubusItems.silver, 1000, ZerubusItems.indium, 800));
             alwaysUnlocked = true;
