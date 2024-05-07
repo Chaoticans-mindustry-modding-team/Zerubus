@@ -55,6 +55,8 @@ public class ZerubusBlocks{
 silverWall, silverWallLarge,
 //distribution
 silverDuct, silverJunction, silverRouter,
+//drills
+silverDrill, silverPlasmaBore,
 //cores
 coreDire
 ;
@@ -108,7 +110,7 @@ coreDire
             consumeLiquid(Liquids.water, 0.05f).boost();
         }};
 
-        plasmaBore = new BeamDrill("plasma-bore"){{
+        silverPlasmaBore = new BeamDrill("silver-plasma-bore"){{
             requirements(Category.production, with(ZerubusItems.silver, 20,ZerubusItems.indium, 20));
             consumePower(0.15f);
 
