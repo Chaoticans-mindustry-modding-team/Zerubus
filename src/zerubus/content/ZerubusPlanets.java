@@ -41,7 +41,7 @@ public class ZerubusPlanets{
                 Color.valueOf("ff8546"),
                 Color.valueOf("f49878")
             );
-            orbitSpacing = 9f;
+            orbitSpacing = 5f;
         }};
 
         zerubus = new Planet("zerubus", cataclysm, 1f, 2){{
@@ -56,7 +56,7 @@ public class ZerubusPlanets{
             landCloudColor = Color.valueOf("ed5532");
             atmosphereColor = Color.valueOf("f06208");
             defaultEnv = Env.scorching | Env.terrestrial;
-            startSector = 16;
+            startSector = 10;
             atmosphereRadIn = 0.02f;
             atmosphereRadOut = 0.3f;
             tidalLock = false;
