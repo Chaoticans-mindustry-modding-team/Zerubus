@@ -5,7 +5,7 @@ import arc.struct.*;
 import mindustry.type.*;
 import mindustry.content.*;
 
-import static mindustry.content.items.*;
+import static mindustry.content.Items.*;
 
 public class ZerubusItems{
     public static Item
