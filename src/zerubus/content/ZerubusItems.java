@@ -10,13 +10,19 @@ public class ZerubusItems{
 
     ;
     public static void load(){
-      indium = new Item("indium", Color.valueOf("000080")){{
-          hardness = 1;
-          cost = 0.5f;
-          alwaysUnlocked = true;
-      }};
+        indium = new Item("indium", Color.valueOf("000080")){{
+            hardness = 1;
+            cost = 0.5f;
+            alwaysUnlocked = true;
+        }};
 
-      silver = new Item("silver", Color.valueOf("a0a0ac")){{
+        silver = new Item("silver", Color.valueOf("a0a0ac")){{
+            hardness = 1;
+            cost = 0.5f;
+            alwaysUnlocked = true;
+        }};
+
+        silicate = new Item("silicate", Color.valueOf("85a468")){{
           hardness = 1;
           cost = 0.5f;
           alwaysUnlocked = true;
