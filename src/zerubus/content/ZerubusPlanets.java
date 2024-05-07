@@ -57,7 +57,6 @@ public class ZerubusPlanets{
             atmosphereColor = Color.valueOf("f06208");
             defaultEnv = Env.scorching | Env.terrestrial;
             startSector = 16;
-            sectorSize = 2;
             atmosphereRadIn = 0.02f;
             atmosphereRadOut = 0.3f;
             tidalLock = false;
