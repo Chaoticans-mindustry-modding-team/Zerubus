@@ -76,7 +76,6 @@ coreDire
         }};
 
         bloodSoil = new Floor("blood-soil"){{
-            attributes.set(Attribute.ectoplasm, 0.5f);
         }};
         
         silverWall = new Wall("silver-wall"){{
