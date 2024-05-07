@@ -35,6 +35,7 @@ public class ZerubusJavaMod extends Mod{
         Log.info("Loadin");
         ZerubusItems.load();
         ZerubusBlocks.load();
+        ZerubusPlanets.load();
        
     }
 
