@@ -41,7 +41,7 @@ public class ZerubusPlanets{
                 Color.valueOf("ff8546"),
                 Color.valueOf("f49878")
             );
-            orbitSpacing = 500f;
+            orbitSpacing = 9f;
         }};
 
         zerubus = new Planet("zerubus", cataclysm, 1f, 2){{
