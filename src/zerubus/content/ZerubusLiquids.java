@@ -8,6 +8,7 @@ public class ZerubusLiquids{
     public static Liquid
     
     oxygen
+    ;
 
     public static void load(){
 
