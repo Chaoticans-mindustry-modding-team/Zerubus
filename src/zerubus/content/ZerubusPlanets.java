@@ -17,6 +17,7 @@ import mindustry.world.meta.*;
 import zerubus.content.*;
 import mindustry.content.*;
 
+import static mindustry.content.Planets.*;
 import static zerubus.content.ZerubusItems.*;
 
 public class ZerubusPlanets{
