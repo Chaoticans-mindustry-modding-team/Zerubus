@@ -10,6 +10,8 @@ public class ZerubusItems{
     indium, silver 
 
     ;
+
+    public static final Seq<Item> zerubusItems = new Seq<>();
     public static void load(){
         indium = new Item("indium", Color.valueOf("000080")){{
             hardness = 1;
