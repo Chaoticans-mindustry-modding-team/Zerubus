@@ -56,7 +56,7 @@ silverWall, silverWallLarge,
 //distribution
 silverDuct, silverJunction, silverRouter,
 //drills
-//silverDrill, silverPlasmaBore,
+silverDrill, silverPlasmaBore,
 //cores
 coreDire
 ;
@@ -99,7 +99,7 @@ coreDire
             solid = false;
         }};
 
-       /* silverDrill = new Drill("silver-drill"){{
+        silverDrill = new Drill("silver-drill"){{
             requirements(Category.production, with(ZerubusItems.silver, 20, ZerubusItems.indium, 10));
             tier = 1;
             drillTime = 600;
@@ -118,7 +118,7 @@ coreDire
             size = 2;
             range = 5;
             fogRadius = 3;
-        }}; */
+        }};
 
         coreDire = new CoreBlock("core-dire"){{
             requirements(Category.effect, with(ZerubusItems.silver, 1000, ZerubusItems.indium, 800));
