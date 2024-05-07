@@ -48,8 +48,8 @@ public class ZerubusPlanets{
             generator = new ErekirPlanetGenerator();
             meshLoader = () -> new HexMesh(this, 5);
             cloudMeshLoader = () -> new MultiMesh(
-                new HexSkyMesh(this, 2, 0.15f, 0.14f, 5, Color.valueOf("ff0000").a(0.75f), 2, 0.42f, 1f, 0.43f),
-                new HexSkyMesh(this, 3, 0.6f, 0.15f, 5, Color.valueOf("ff00ff").a(0.75f), 2, 0.42f, 1.2f, 0.45f)
+                new HexSkyMesh(this, 2, 0.15f, 0.14f, 5, Color.valueOf("aa0000").a(0.75f), 2, 0.42f, 1f, 0.43f),
+                new HexSkyMesh(this, 3, 0.6f, 0.15f, 5, Color.valueOf("aa00aa").a(0.75f), 2, 0.42f, 1.2f, 0.45f)
             );
             alwaysUnlocked = true;
             accessible = true;
