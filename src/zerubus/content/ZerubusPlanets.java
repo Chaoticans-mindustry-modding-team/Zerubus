@@ -66,7 +66,7 @@ public class ZerubusPlanets{
             lightDstFrom = 0.2f;
             clearSectorOnLose = true;
             defaultCore = ZerubusBlocks.coreDire;
-            iconColor = Color.valueOf("f0000");
+            iconColor = Color.valueOf("ff0000");
             hiddenItems.addAll(Items.erekirItems).addAll(Items.serpuloItems).removeAll(zerubusItems);
             enemyBuildSpeedMultiplier = 0.4f;
 
