@@ -25,7 +25,7 @@ public class ZerubusPlanets{
     zerubus
     ;
     public static void load(){
-        cataclysm = new Planet("cataclysm", null, 4f){{
+        cataclysm = new Planet("cataclysm", sun, 4f){{
             bloom = true;
             accessible = false;
 
@@ -40,6 +40,7 @@ public class ZerubusPlanets{
                 Color.valueOf("ff8546"),
                 Color.valueOf("f49878")
             );
+            orbitSpacing = 90f;
         }};
 
         zerubus = new Planet("zerubus", cataclysm, 1f, 2){{
