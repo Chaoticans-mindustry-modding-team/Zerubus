@@ -105,7 +105,6 @@ coreDire
             drillTime = 600;
             size = 2;
             //mechanical drill doesn't work in space
-            envEnabled ^= Env.space;
 
             consumeLiquid(Liquids.water, 0.05f).boost();
         }};
