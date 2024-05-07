@@ -58,6 +58,8 @@ crimsonGrass, zeruvianSoil, zeruvianStone, bloodSoil,
 crimsonGrassWall, zeruvianSoilWall, zeruvianStoneWall,
 //ores
 silverOre, indiumOre, silicateWallOre,
+//factories
+silicateForge,
 //walls
 silverWall, silverWallLarge,
 //distribution
@@ -123,7 +125,7 @@ coreDire
             requirements(Category.crafting, with(ZerubusItems.silver, 40, ZerubusItems.indium, 60));
             craftEffect = Fx.smeltsmoke;
             outputItem = new ItemStack(Items.silicon, 5);
-            outputLiquid = new liquidStack(ZerubusLiquids.oxygen, 0.2);
+            outputLiquid = new LiquidStack(ZerubusLiquids.oxygen, 0.2);
             craftTime = 40f;
             size = 3;
             hasPower = true;
@@ -209,7 +211,7 @@ coreDire
         }};
 
         coalTurbine = new ConsumeGenerator("coal-turbine"){{
-            requirements(Category.power, with(ZerubusItems.silver, 40, ZerubusItems,indium, 10));
+            requirements(Category.power, with(ZerubusItems.silver, 40, ZerubusItems.indium, 10));
             powerProduction = 1f;
             itemDuration = 120f;
 
