@@ -167,7 +167,7 @@ coreDire
                     ammoMultiplier = 2;
                     lifetime = 20f;
                 }},
-            );
+                );
 
             recoils = 2;
             drawer = new DrawTurret(){{
