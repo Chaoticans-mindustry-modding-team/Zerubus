@@ -16,22 +16,7 @@ import mindustry.world.meta.*;
 
 import static mindustry.Vars.*;
 
-package mindustry.maps.planet;
-
-import arc.graphics.*;
-import arc.math.*;
-import arc.math.geom.*;
-import arc.util.*;
-import arc.util.noise.*;
-import mindustry.content.*;
-import mindustry.game.*;
-import mindustry.maps.generators.*;
-import mindustry.type.*;
-import mindustry.world.*;
-
-import static mindustry.Vars.*;
-
-public class TantrosPlanetGenerator extends PlanetGenerator{
+public class ZerubusPlanetGenerator extends PlanetGenerator{
     Color c1 = Color.valueOf("dd2423"), c2 = Color.valueOf("aa27aa"), out = new Color();
 
     Block[][] arr = {
