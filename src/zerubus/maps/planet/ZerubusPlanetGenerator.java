@@ -17,6 +17,7 @@ import mindustry.world.meta.*;
 import static mindustry.Vars.*;
 
 public class ZerubusPlanetGenerator extends PlanetGenerator{
+    Color c1 = Color.valueOf("ff2343"), c2 = Color.valueOf("aa23aa"), out = new Color();
     public float heightScl = 0.9f, octaves = 8, persistence = 0.7f, heightPow = 3f, heightMult = 1.6f;
 
     //TODO inline/remove
@@ -45,16 +46,6 @@ public class ZerubusPlanetGenerator extends PlanetGenerator{
     }
 
     @Override
-    public Color getColor(Vec3 position){
-        Block block = getBlock(position);
-
-        //more obvious color
-        if(block == Blocks.crystallineStone) block = Blocks.crystalFloor;
-        //TODO this might be too green
-        //if(block == Blocks.beryllicStone) block = Blocks.arkyicStone;
-
-        return Tmp.c1.set(block.mapColor).a(1f - block.albedo);
-    }
 
     @Override
     public float getSizeScl(){
