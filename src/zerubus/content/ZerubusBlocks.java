@@ -155,19 +155,19 @@ coreDire
         scale = new ItemTurret("scale"){{
             requirements(Category.turret, with(ZerubusItems.silver, 30, ZerubusItems.indium, 20));
             ammo(
-                ZerubusItems.silver,  new BasicBulletType(6f, 36){{
-                    width = 15f;
-                    height = 24f;
-                    lifetime = 30f;
-                    ammoMultiplier = 2;
-                }},
-                ZerubusItems.indium, new BasicBulletType(10f, 30){{
-                    width = 15f;
-                    height = 26f;
-                    ammoMultiplier = 2;
-                    lifetime = 20f;
-                }},
-                );
+                 ZerubusItems.silver,  new BasicBulletType(6f, 36){{
+                     width = 15f;
+                     height = 24f;
+                     lifetime = 30f;
+                     ammoMultiplier = 2;
+                 }},
+                 ZerubusItems.indium, new BasicBulletType(10f, 30){{
+                     width = 15f;
+                     height = 26f;
+                     ammoMultiplier = 2;
+                     lifetime = 20f;
+                 }},
+                )
 
             recoils = 2;
             drawer = new DrawTurret(){{
