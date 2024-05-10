@@ -53,8 +53,8 @@ public class ZerubusPlanets{
             );
             alwaysUnlocked = true;
             accessible = true;
-            landCloudColor = Color.valueOf("ed5532");
-            atmosphereColor = Color.valueOf("f06208");
+            landCloudColor = Color.valueOf("fd4522");
+            atmosphereColor = Color.valueOf("ff4200");
             defaultEnv = Env.scorching | Env.terrestrial;
             startSector = 10;
             atmosphereRadIn = 0.02f;
@@ -82,7 +82,7 @@ public class ZerubusPlanets{
                 r.showSpawns = true;
                 r.fog = true;
                 r.staticFog = true;
-                r.lighting = false;
+                r.lighting = true;
                 r.coreDestroyClear = true;
                 r.onlyDepositCore = true;
             };
