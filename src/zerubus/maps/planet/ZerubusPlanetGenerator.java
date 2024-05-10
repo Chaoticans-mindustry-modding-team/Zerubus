@@ -20,7 +20,7 @@ public class ZerubusPlanetGenerator extends PlanetGenerator{
     Color c1 = Color.valueOf("dd2423"), c2 = Color.valueOf("aa27aa"), out = new Color();
 
     Block[][] arr = {
-    {Blocks.redmat, Blocks.redmat, Blocks.darksand, Blocks.bluemat, Blocks.bluemat}
+    {ZerubusBlocks.crimson-grass, ZerubusBlocks.zeruvian-stone, ZerubusBlocks.zeruvian-stone, ZerubusBlocks.zeruvian-soil, ZerubusBlocks.zeruvian-soil}
     };
 
     {
@@ -56,18 +56,6 @@ public class ZerubusPlanetGenerator extends PlanetGenerator{
     @Override
     public void genTile(Vec3 position, TileGen tile){
         tile.floor = getBlock(position);
-
-        if(tile.floor == Blocks.redmat && rand.chance(0.1)){
-            tile.block = Blocks.redweed;
-        }
-
-        if(tile.floor == Blocks.bluemat && rand.chance(0.03)){
-            tile.block = Blocks.purbush;
-        }
-
-        if(tile.floor == Blocks.bluemat && rand.chance(0.002)){
-            tile.block = Blocks.yellowCoral;
-        }
     }
 
     @Override
