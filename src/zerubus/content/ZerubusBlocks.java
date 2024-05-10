@@ -168,8 +168,7 @@ coreDire
                      lifetime = 20f;
                  }},
             );
-
-            recoils = 2;
+            
             drawer = new DrawTurret(){{
                 for(int i = 0; i < 2; i ++){
                     int f = i;
