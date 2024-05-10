@@ -62,6 +62,8 @@ silverOre, indiumOre, silicateWallOre,
 silicateForge,
 //walls
 silverWall, silverWallLarge,
+//turrets
+scale, collision,
 //distribution
 silverDuct, silverJunction, silverRouter,
 //drills
@@ -148,6 +150,91 @@ coreDire
             requirements(Category.defense, with(ZerubusItems.silver, 24));
             health = 2400;
             envDisabled |= Env.scorching;
+        }};
+
+        scale = new ItemTurret("scale"){{
+            requirements(Category.turret, with(ZerubusItems.silver, 30, ZerubusItems.indium, 20));
+            ammo(
+                ZerubusItems.silver,  new BasicBulletType(6f, 36){{
+                    width = 15f;
+                    height = 24f;
+                    lifetime = 30f;
+                    ammoMultiplier = 2;
+                }},
+                ZerubusItems.indium, new BasicBulletType(10f, 30){{
+                    width = 15f;
+                    height = 26f;
+                    ammoMultiplier = 2;
+                    lifetime = 20f;
+                }},
+            );
+
+            recoils = 2;
+            drawer = new DrawTurret(){{
+                for(int i = 0; i < 2; i ++){
+                    int f = i;
+                    parts.add(new RegionPart("-side-l" + (i == 0 ? "l" : "r")){{
+                        progress = PartProgress.recoil;
+                        recoilIndex = f;
+                        under = true;
+                        moveY = -1.5f;
+                    }});
+                }
+
+                for(int i = 0; i < 2; i ++){
+                    int f = i;
+                    parts.add(new RegionPart("-blade-l" + (i == 0 ? "l" : "r")){{
+                        progress = PartProgress.recoil;
+                        recoilIndex = f;
+                        under = true;
+                        moveY = -1.5f;
+                    }});
+                }
+
+                for(int i = 0; i < 2; i ++){
+                    int f = i;
+                    parts.add(new RegionPart("-side-r" + (i == 0 ? "l" : "r")){{
+                        progress = PartProgress.recoil;
+                        recoilIndex = f;
+                        under = true;
+                        moveY = -1.5f;
+                    }});
+                }
+
+                for(int i = 0; i < 2; i ++){
+                    int f = i;
+                    parts.add(new RegionPart("-blade-r" + (i == 0 ? "l" : "r")){{
+                        progress = PartProgress.recoil;
+                        recoilIndex = f;
+                        under = true;
+                        moveY = -1.5f;
+                    }});
+                }
+
+                for(int i = 0; i < 2; i ++){
+                    int f = i;
+                    parts.add(new RegionPart("-mid" + (i == 0 ? "l" : "r")){{
+                        progress = PartProgress.recoil;
+                        recoilIndex = f;
+                        under = true;
+                        moveY = -1.5f;
+                    }});
+                }
+            }};
+
+            recoil = 0.5f;
+            shootY = 3f;
+            reload = 20f;
+            range = 110;
+            shootCone = 15f;
+            ammoUseEffect = Fx.casing1;
+            health = 250;
+            inaccuracy = 2f;
+            rotateSpeed = 10f;
+            coolant = consumeCoolant(0.1f);
+            researchCostMultiplier = 0.05f;
+
+            limitRange();
         }};
 
         silverDuct = new StackConveyor("silver-duct"){{
