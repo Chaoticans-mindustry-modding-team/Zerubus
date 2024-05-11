@@ -166,7 +166,7 @@ coreDire
                      height = 26f;
                      ammoMultiplier = 2;
                      lifetime = 20f;
-                 }},
+                 }}
             );
             
             drawer = new DrawTurret(){{
