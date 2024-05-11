@@ -159,10 +159,10 @@ coreDire
                  ZerubusItems.silver,  new BasicBulletType(6f, 36){{
                      width = 15f;
                      height = 24f;
-                     pierce = 3f;
-                     trailColor = "8EE1FF";
+                     pierce = 3;
+                     trailColor = 8EE1FF;
                      trailParam = 4f;
-                     trailLength = 13f;
+                     trailLength = 13;
                      trailWidth = 4f;
                      hitSize = 2f;
                      lifetime = 30f;
@@ -171,10 +171,10 @@ coreDire
                  ZerubusItems.indium, new BasicBulletType(10f, 30){{
                      width = 15f;
                      height = 26f;
-                     pierce = 3f;
-                     trailColor = "000080";
+                     pierce = 3;
+                     trailColor = 000080;
                      trailParam = 4f;
-                     trailLength = 13f;
+                     trailLength = 13;
                      trailWidth = 4f;
                      hitSize = 2f;
                      ammoMultiplier = 2;
@@ -189,8 +189,7 @@ coreDire
                     4, -1.25f, 0
                 };
                 shots = 4;
-                shootSound = "shootAlt";
-                spread = 3;
+                shootSound = shootAlt;
             }};
             
             drawer = new DrawTurret(){{
