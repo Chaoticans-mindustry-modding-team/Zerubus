@@ -153,6 +153,7 @@ coreDire
         }};
 
         scale = new ItemTurret("scale"){{
+            size = 2;
             requirements(Category.turret, with(ZerubusItems.silver, 30, ZerubusItems.indium, 20));
             ammo(
                  ZerubusItems.silver,  new BasicBulletType(6f, 36){{
