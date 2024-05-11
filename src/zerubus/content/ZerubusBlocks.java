@@ -191,6 +191,7 @@ coreDire
                 shots = 4;
                 shootSound = "shootAlt";
                 spread = 3;
+            }};
             
             drawer = new DrawTurret(){{
                 for(int i = 0; i < 2; i ++){
