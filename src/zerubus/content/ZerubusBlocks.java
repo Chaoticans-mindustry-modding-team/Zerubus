@@ -160,7 +160,7 @@ coreDire
                      width = 15f;
                      height = 24f;
                      pierce = 3;
-                     trailColor = 8EE1FF;
+                     trailColor = Color.valueOf("8ee1ff");
                      trailParam = 4f;
                      trailLength = 13;
                      trailWidth = 4f;
@@ -172,7 +172,7 @@ coreDire
                      width = 15f;
                      height = 26f;
                      pierce = 3;
-                     trailColor = 000080;
+                     trailColor = Color.valueOf("000080");
                      trailParam = 4f;
                      trailLength = 13;
                      trailWidth = 4f;
