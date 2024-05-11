@@ -15,6 +15,7 @@ import mindustry.world.blocks.environment.*;
 import mindustry.world.meta.*;
 import zerubus.content.*;
 
+import static mindustry.content.ZerubusBlocks.*;
 import static mindustry.Vars.*;
 
 public class ZerubusPlanetGenerator extends PlanetGenerator{
