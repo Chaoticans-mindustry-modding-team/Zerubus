@@ -177,7 +177,7 @@ coreDire
                         progress = PartProgress.recoil;
                         recoilIndex = f;
                         under = true;
-                        moveY = -1.5f;
+                        moveY = -1f;
                     }});
                 }
 
@@ -187,7 +187,7 @@ coreDire
                         progress = PartProgress.recoil;
                         recoilIndex = f;
                         under = true;
-                        moveY = -1.5f;
+                        moveY = -2f;
                     }});
                 }
 
@@ -197,7 +197,7 @@ coreDire
                         progress = PartProgress.recoil;
                         recoilIndex = f;
                         under = true;
-                        moveY = -1.5f;
+                        moveY = -1f;
                     }});
                 }
 
@@ -207,7 +207,7 @@ coreDire
                         progress = PartProgress.recoil;
                         recoilIndex = f;
                         under = true;
-                        moveY = -1.5f;
+                        moveY = -2f;
                     }});
                 }
 
@@ -217,7 +217,7 @@ coreDire
                         progress = PartProgress.recoil;
                         recoilIndex = f;
                         under = true;
-                        moveY = -1.5f;
+                        moveY = -2f;
                     }});
                 }
             }};
