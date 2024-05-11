@@ -22,7 +22,7 @@ public class ZerubusPlanetGenerator extends PlanetGenerator{
     Color c1 = Color.valueOf("dd2423"), c2 = Color.valueOf("aa27aa"), out = new Color();
 
     Block[][] arr = {
-    {ZerubusBlocks.crimson-grass, ZerubusBlocks.zeruvian-stone, ZerubusBlocks.zeruvian-stone, ZerubusBlocks.zeruvian-soil, ZerubusBlocks.zeruvian-soil}
+    {ZerubusBlocks.crimsonGrass, ZerubusBlocks.zeruvianStone, ZerubusBlocks.zeruvianStone, ZerubusBlocks.zeruvianSoil, ZerubusBlocks.zeruvianSoil}
     };
 
     {
