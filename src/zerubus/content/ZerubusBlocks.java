@@ -159,16 +159,38 @@ coreDire
                  ZerubusItems.silver,  new BasicBulletType(6f, 36){{
                      width = 15f;
                      height = 24f;
+                     pierce = 3f;
+                     trailColor = "8EE1FF";
+                     trailParam = 4f;
+                     trailLength = 13f;
+                     trailWidth = 4f;
+                     hitSize = 2f;
                      lifetime = 30f;
                      ammoMultiplier = 2;
                  }},
                  ZerubusItems.indium, new BasicBulletType(10f, 30){{
                      width = 15f;
                      height = 26f;
+                     pierce = 3f;
+                     trailColor = "000080";
+                     trailParam = 4f;
+                     trailLength = 13f;
+                     trailWidth = 4f;
+                     hitSize = 2f;
                      ammoMultiplier = 2;
                      lifetime = 20f;
                  }}
             );
+
+            shoot = new ShootBarrel(){{
+                barrels = new float[]{
+                    -5, -1.25f, 0,
+                    0, 0, 0,
+                    4, -1.25f, 0
+                };
+                shots = 4;
+                shootSound = "shootAlt";
+                spread = 3;
             
             drawer = new DrawTurret(){{
                 for(int i = 0; i < 2; i ++){
@@ -223,14 +245,15 @@ coreDire
             }};
 
             recoil = 0.5f;
+            
             shootY = 3f;
             reload = 20f;
             range = 110;
             shootCone = 15f;
             ammoUseEffect = Fx.casing1;
-            health = 250;
+            health = 1000;
             inaccuracy = 2f;
-            rotateSpeed = 10f;
+            rotateSpeed = 5f;
             coolant = consumeCoolant(0.1f);
             researchCostMultiplier = 0.05f;
 
