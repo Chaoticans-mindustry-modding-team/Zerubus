@@ -15,7 +15,7 @@ public class ZerubusItems{
 
     public static final Seq<Item> zerubusItems = new Seq<>();
     public static void load(){
-        indium = new Item("indium", Color.valueOf("000080")){{
+        indium = new Item("indium", Color.valueOf("2a3581")){{
             hardness = 1;
             cost = 0.5f;
             alwaysUnlocked = true;
@@ -27,8 +27,20 @@ public class ZerubusItems{
             alwaysUnlocked = true;
         }};
 
+        brimstone = new Item("brimstone", Color.valueOf("8a1f25")){{
+            hardness = 1;
+            cost = 0.5f;
+            alwaysUnlocked = true;
+        }};
+
+        quartz = new Item("quartz", Color.valueOf("addab8")){{
+            hardness = 1;
+            cost = 0.5f;
+            alwaysUnlocked = true;
+        }};
+
       zerubusItems.addAll(
-          silver, indium, silicon, coal
+          silver, indium, brimstone, quartz, silicon, coal
           );
     
     }
