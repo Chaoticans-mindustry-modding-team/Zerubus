@@ -96,7 +96,7 @@ coreDire
             variants = 3;
         }};
 
-        washedParalia = new Floor("washed-paralia"){{
+        washedParalia = new ShallowLiquid("washed-paralia"){{
             speedMultiplier = 0.8f;
             statusDuration = 50f;
             albedo = 0.9f;
