@@ -53,23 +53,23 @@ public class ZerubusBlocks{
     public static Block 
 
 //floors n crap
-crimsonGrass, zeruvianSoil, zeruvianStone, bloodSoil,
+crimsonGrass, zeruvianSoil, zeruvianStone, brimstone,
 //static walls
 crimsonGrassWall, zeruvianSoilWall, zeruvianStoneWall,
 //ores
-silverOre, indiumOre, silicateWallOre,
+silverOre, indiumOre,
 //factories
-silicateForge,
+
 //walls
-silverWall, silverWallLarge,
+
 //turrets
-scale, collision,
+
 //distribution
-silverDuct, silverJunction, silverRouter,
+
 //drills
-silverDrill, silverPlasmaBore,
+
 //power
-silverNode, indiumNode, silverBattery, coalTurbine,
+
 //cores
 coreDire
 ;
@@ -89,7 +89,7 @@ coreDire
             variants = 4;
         }};
 
-        bloodSoil = new Floor("blood-soil"){{
+        brimstone = new Floor("brimstone"){{
         }};
 
         crimsonGrassWall = new StaticWall("crimson-grass-wall"){{
@@ -114,225 +114,6 @@ coreDire
             oreDefault = true;
             oreThreshold = 0.81f;
             oreScale = 23.47619f;
-        }};
-
-        silicateWallOre = new OreBlock(ZerubusItems.silicate){{
-            oreDefault = true;
-            oreThreshold = 0.81f;
-            oreScale = 23.47619f;
-            wallOre = true;
-        }};
-
-        silicateForge = new GenericCrafter("silicate-forge"){{
-            requirements(Category.crafting, with(ZerubusItems.silver, 40, ZerubusItems.indium, 60));
-            craftEffect = Fx.smeltsmoke;
-            outputItem = new ItemStack(Items.silicon, 5);
-            outputLiquid = new LiquidStack(ZerubusLiquids.oxygen, 0.2f);
-            craftTime = 40f;
-            size = 3;
-            hasPower = true;
-            hasLiquids = true;
-            drawer = new DrawMulti(new DrawDefault(), new DrawFlame(Color.valueOf("ffef99")));
-            ambientSound = Sounds.smelter;
-            ambientSoundVolume = 0.07f;
-
-            consumeItems(with(Items.coal, 5, ZerubusItems.silicate, 5));
-            consumePower(0.50f);
-        }};
-        
-        silverWall = new Wall("silver-wall"){{
-            requirements(Category.defense, with(ZerubusItems.silver, 6));
-            health = 600;
-            envDisabled |= Env.scorching;
-        }};
-
-        silverWallLarge = new Wall("silver-wall-large"){{
-            requirements(Category.defense, with(ZerubusItems.silver, 24));
-            health = 2400;
-            envDisabled |= Env.scorching;
-        }};
-
-        scale = new ItemTurret("scale"){{
-            size = 2;
-            requirements(Category.turret, with(ZerubusItems.silver, 30, ZerubusItems.indium, 20));
-            ammo(
-                 ZerubusItems.silver,  new BasicBulletType(6f, 36){{
-                     width = 15f;
-                     height = 24f;
-                     pierce = true;
-                     trailColor = Color.valueOf("8ee1ff");
-                     trailParam = 4f;
-                     trailLength = 13;
-                     trailWidth = 4f;
-                     hitSize = 2f;
-                     lifetime = 30f;
-                     ammoMultiplier = 2;
-                 }},
-                 ZerubusItems.indium, new BasicBulletType(10f, 30){{
-                     width = 15f;
-                     height = 26f;
-                     pierce = true;
-                     trailColor = Color.valueOf("000080");
-                     trailParam = 4f;
-                     trailLength = 13;
-                     trailWidth = 4f;
-                     hitSize = 2f;
-                     ammoMultiplier = 2;
-                     lifetime = 20f;
-                 }}
-            );
-
-            shoot = new ShootBarrel(){{
-                barrels = new float[]{
-                    -5, -1.25f, 0,
-                    0, 0, 0,
-                    4, -1.25f, 0
-                };
-                shots = 4;
-                shootSound = Sounds.shootAlt;
-            }};
-            
-            drawer = new DrawTurret(){{
-                for(int i = 0; i < 2; i ++){
-                    int f = i;
-                    parts.add(new RegionPart("-side-l" + (i == 0 ? "l" : "r")){{
-                        progress = PartProgress.recoil;
-                        recoilIndex = f;
-                        under = true;
-                        moveY = -1f;
-                    }});
-                }
-
-                for(int i = 0; i < 2; i ++){
-                    int f = i;
-                    parts.add(new RegionPart("-blade-l" + (i == 0 ? "l" : "r")){{
-                        progress = PartProgress.recoil;
-                        recoilIndex = f;
-                        under = true;
-                        moveY = -2f;
-                    }});
-                }
-
-                for(int i = 0; i < 2; i ++){
-                    int f = i;
-                    parts.add(new RegionPart("-side-r" + (i == 0 ? "l" : "r")){{
-                        progress = PartProgress.recoil;
-                        recoilIndex = f;
-                        under = true;
-                        moveY = -1f;
-                    }});
-                }
-
-                for(int i = 0; i < 2; i ++){
-                    int f = i;
-                    parts.add(new RegionPart("-blade-r" + (i == 0 ? "l" : "r")){{
-                        progress = PartProgress.recoil;
-                        recoilIndex = f;
-                        under = true;
-                        moveY = -2f;
-                    }});
-                }
-
-                for(int i = 0; i < 2; i ++){
-                    int f = i;
-                    parts.add(new RegionPart("-mid" + (i == 0 ? "l" : "r")){{
-                        progress = PartProgress.recoil;
-                        recoilIndex = f;
-                        under = true;
-                        moveY = -2f;
-                    }});
-                }
-            }};
-
-            recoil = 0.5f;
-            
-            shootY = 3f;
-            reload = 20f;
-            range = 110;
-            shootCone = 15f;
-            ammoUseEffect = Fx.casing1;
-            health = 1000;
-            inaccuracy = 2f;
-            rotateSpeed = 5f;
-            coolant = consumeCoolant(0.1f);
-            researchCostMultiplier = 0.05f;
-
-            limitRange();
-        }};
-
-        silverDuct = new StackConveyor("silver-duct"){{
-            requirements(Category.distribution, with(ZerubusItems.silver, 3));
-            health = 20;
-            speed = 4f / 60f;
-            itemCapacity = 15;
-            solid = false;
-        }};
-
-        silverJunction = new Junction("silver-junction"){{
-            requirements(Category.distribution, with(ZerubusItems.silver, 2));
-            speed = 30;
-            capacity = 6;
-            health = 30;
-            buildCostMultiplier = 6f;
-            solid = false;
-        }};
-
-        silverRouter = new DuctRouter("silver-router"){{
-            requirements(Category.distribution, with(ZerubusItems.silver,2));
-            health = 90;
-            speed = 4f;
-            regionRotated1 = 1;
-            solid = false;
-        }};
-
-        silverDrill = new Drill("silver-drill"){{
-            requirements(Category.production, with(ZerubusItems.silver, 20, ZerubusItems.indium, 10));
-            tier = 1;
-            drillTime = 600;
-            size = 2;
-            //mechanical drill doesn't work in space
-
-            consumeLiquid(Liquids.water, 0.05f).boost();
-        }}; 
-
-        silverPlasmaBore = new BeamDrill("silver-plasma-bore"){{
-            requirements(Category.production, with(ZerubusItems.silver, 20,ZerubusItems.indium, 20));
-            consumePower(0.15f);
-
-            drillTime = 600f;
-            tier = 1;
-            size = 2;
-            range = 5;
-            fogRadius = 3;
-        }};
-
-        silverNode = new PowerNode("silver-node"){{
-            requirements(Category.power, with(ZerubusItems.silver, 10));
-            maxNodes = 15;
-            laserRange = 8;
-            size = 2;
-        }};
-
-        silverBattery = new Battery("silver-battery"){{
-            requirements(Category.power, with(ZerubusItems.silver, 20, ZerubusItems.indium, 5));
-            consumePowerBuffered(2500f);
-            baseExplosiveness = 1f;
-            size = 2;
-        }};
-
-        coalTurbine = new ConsumeGenerator("coal-turbine"){{
-            requirements(Category.power, with(ZerubusItems.silver, 40, ZerubusItems.indium, 10));
-            powerProduction = 1f;
-            itemDuration = 120f;
-
-            ambientSound = Sounds.smelter;
-            ambientSoundVolume = 0.03f;
-            generateEffect = Fx.generatespark;
-
-            consume(new ConsumeItemFlammable());
-            consume(new ConsumeItemExplode());
-
-            drawer = new DrawMulti(new DrawDefault(), new DrawWarmupRegion());
         }};
 
         coreDire = new CoreBlock("core-dire"){{
