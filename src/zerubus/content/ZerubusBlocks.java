@@ -98,10 +98,6 @@ coreDire
 
         washedParalia = new Floor("washed-paralia"){{
             speedMultiplier = 0.8f;
-            variants = 3;
-            liquidDrop = Liquids.water;
-            liquidMultiplier = 1.5f;
-            isLiquid = true;
             statusDuration = 50f;
             albedo = 0.9f;
             supportsOverlay = true;
