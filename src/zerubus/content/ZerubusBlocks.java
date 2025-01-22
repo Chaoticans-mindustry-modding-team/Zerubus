@@ -53,9 +53,9 @@ public class ZerubusBlocks{
     public static Block 
 
 //floors n crap
-crimsonGrass, zeruvianSoil, zeruvianStone, brimstoneFloor,
+crimsonGrass, zeruvianSoil, zeruvianStone, brimstoneFloor, paraliaSediment, washedParalia, paralicWater,
 //static walls
-crimsonGrassWall, zeruvianSoilWall, zeruvianStoneWall,
+crimsonGrassWall, zeruvianSoilWall, zeruvianStoneWall, paraliaSedimentWall,
 //ores
 silverOre, indiumOre,
 //factories
@@ -92,6 +92,32 @@ coreDire
         brimstoneFloor = new Floor("brimstoneFloor"){{
         }};
 
+        paraliaSediment = new Floor("paralia-sediment"){{
+            variants = 3;
+        }};
+
+        washedParalia = new Floor("washed-paralia"){{
+            speedMultiplier = 0.8f;
+            variants = 3;
+            statusDuration = 50f;
+            albedo = 0.9f;
+            supportsOverlay = true;
+        }};
+
+        paralicWater = new Floor("paralic-water"){{
+            speedMultiplier = 0.2f;
+            variants = 6;
+            liquidDrop = Liquids.water;
+            liquidMultiplier = 1.5f;
+            isLiquid = true;
+            status = StatusEffects.wet;
+            statusDuration = 120f;
+            drownTime = 200f;
+            cacheLayer = CacheLayer.water;
+            albedo = 0.9f;
+            supportsOverlay = true;
+        }};
+        
         crimsonGrassWall = new StaticWall("crimson-grass-wall"){{
             variants = 3;
         }};
@@ -103,6 +129,8 @@ coreDire
         zeruvianStoneWall = new StaticWall("zeruvian-stone-wall"){{
             variants = 3;
         }};
+        
+        paraliaSedimentWall = new StaticWall("paralia-sediment-wall");
 
         silverOre = new OreBlock(ZerubusItems.silver){{
             oreDefault = true;
