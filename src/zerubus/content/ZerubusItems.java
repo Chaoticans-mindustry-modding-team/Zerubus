@@ -9,7 +9,7 @@ import static mindustry.content.Items.*;
 
 public class ZerubusItems{
     public static Item
-    indium, silver, silicate
+    indium, silver, brimstone, quartz
 
     ;
 
