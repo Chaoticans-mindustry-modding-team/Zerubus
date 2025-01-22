@@ -53,7 +53,7 @@ public class ZerubusBlocks{
     public static Block 
 
 //floors n crap
-crimsonGrass, zeruvianSoil, zeruvianStone, brimstone,
+crimsonGrass, zeruvianSoil, zeruvianStone, brimstoneFloor,
 //static walls
 crimsonGrassWall, zeruvianSoilWall, zeruvianStoneWall,
 //ores
@@ -89,7 +89,7 @@ coreDire
             variants = 4;
         }};
 
-        brimstone = new Floor("brimstone"){{
+        brimstoneFloor = new Floor("brimstoneFloor"){{
         }};
 
         crimsonGrassWall = new StaticWall("crimson-grass-wall"){{
