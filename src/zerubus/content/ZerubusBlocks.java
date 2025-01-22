@@ -124,7 +124,7 @@ coreDire
             unitType = UnitTypes.alpha;
             health = 4000;
             itemCapacity = 4000;
-            size = 4;
+            size = 3;
 
             unitCapModifier = 8;
         }};
