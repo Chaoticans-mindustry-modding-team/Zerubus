@@ -27,14 +27,8 @@ public class ZerubusItems{
             alwaysUnlocked = true;
         }};
 
-        silicate = new Item("silicate", Color.valueOf("85a468")){{
-          hardness = 1;
-          cost = 0.5f;
-          alwaysUnlocked = true;
-      }};
-
       zerubusItems.addAll(
-          silver, indium, silicate, silicon, coal
+          silver, indium, silicon, coal
           );
     
     }
